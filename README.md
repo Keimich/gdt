@@ -13,8 +13,9 @@ Git Diff Tool (gdt) é uma ferramenta de linha de comando (CLI) para visualizar 
 
 ## Comandos
 
-- `↑ / ↓` : Navegar entre os arquivos modificados.
+- `↑ / ↓ / ← / →` : Navegar entre os arquivos modificados.
 - `TAB` : Alternar entre a lista de arquivos e a visualização do diff.
+- `Enter` : Alternar entre a lista de arquivos e a visualização do diff.
 - `q` : Sair do programa.
 - `Esc` : Sair do programa.
 - `Ctrl+C` : Sair do programa.
@@ -23,10 +24,16 @@ Git Diff Tool (gdt) é uma ferramenta de linha de comando (CLI) para visualizar 
 
 ### Executar a ferramenta
 
+Instale as dependencias
+
+```
+npm install
+```
+
 Para executar a ferramenta, navegue até o diretório onde o script `gdt` está localizado e execute:
 
 ```sh
-./gdt
+./gdt.ts
 ```
 
 Exibir a ajuda
@@ -45,16 +52,22 @@ ou
 Instalação
 Para tornar o script executável e movê-lo para um diretório no PATH, siga os passos abaixo:
 
+- Build do script
+
+```
+npm run build
+```
+
 - Torne o arquivo executável:
 
 ```sh
-chmod +x gdt
+chmod +x dist/gdt.js
 ```
 
 - (Opcional) Mova o arquivo para um diretório no PATH, como /usr/local/bin:
 
 ```sh
-sudo mv gdt /usr/local/bin/gdt
+sudo cp dist/gdt.js /usr/local/bin/gdt
 ```
 
 Agora você pode executar o script de qualquer lugar no terminal:
@@ -89,11 +102,10 @@ Exibir a ajuda
 $ gdt -h
 Ajuda - Visualizador de Modificações do Git
 Comandos:
-  ↑ / ↓ : Navegar entre os arquivos modificados
-  TAB  : Alternar entre a lista de arquivos e a visualização do diff
+  ↑ / ↓ / ← / → : Navegar entre os arquivos modificados
+  TAB || Enter  : Alternar entre a lista de arquivos e a visualização do diff
   Ctrl+C || Esc || q : Sair do programa
 Exibe os arquivos modificados no repositório Git e suas diferenças.
-Pressione qualquer tecla para voltar ao programa...
 ```
 
 Contribuição
