@@ -20,6 +20,12 @@ Git Diff Tool (gdt) é uma ferramenta de linha de comando (CLI) para visualizar 
 - `Esc` : Sair do programa.
 - `Ctrl+C` : Sair do programa.
 
+## Pré-requisitos
+
+```
+npm install -g ts-node
+```
+
 ## Uso
 
 ### Executar a ferramenta
@@ -49,7 +55,7 @@ ou
 ./gdt --help
 ```
 
-Instalação
+## Instalação
 Para tornar o script executável e movê-lo para um diretório no PATH, siga os passos abaixo:
 
 - Build do script
